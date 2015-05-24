@@ -1,0 +1,37 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.williamma.greed"
+    android:versionCode="1"
+    android:versionName="1" >
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="Greed Game" >
+        <meta-data 
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <activity
+            android:name=".SampleGame"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:label="Greed: Dodge Game"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity" 
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+    </application>
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.Access_NETWORK_STATE"/>
+</manifest>
